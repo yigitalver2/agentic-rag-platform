@@ -323,7 +323,7 @@ AWS productionization S3/SQS/RDS/Redis/ECS API-worker, CloudWatch,
 secrets, staging. CI/CD + load + release Regression gates, load test,
 docs, architecture, public demo. 9+ P2 self-hosted cloud inference GPU
 EC2 + vLLM; OpenAI-compatible endpoint ve cost benchmark. - Her
-milestone çalışan artifact + ölçülebilir çıktı üretir; README/ADR
+milestone çalışan artifact + ölçülebilir çıktı üretir; README
 güncellenir; yeni özellik en az bir eval/test ile ölçülür; public
 release öncesi holdout/challenge sonuçları dondurulur. 13.2 Ana riskler
 Risk Azaltma Scope creep P0/P1/P2 sınırı; multi-agent ayrı proje. Local
@@ -345,14 +345,14 @@ farkı Recall/nDCG ile gösterilsin. 6. No-answer örneğinde sistem abstain
 etsin. 7. Trace ekranında retrieval model verifier path'i görülsün. -\>
 -\> 8. External MCP client search tool'u çağırsın. 9. AWS endpoint
 health + CloudWatch telemetry gösterilsin. 10. CI pipeline'da test +
-eval smoke + Docker build sonucu gösterilsin. 14. Backlog, ADR ve Repo
+eval smoke + Docker build sonucu gösterilsin. 14. Backlog ve Repo
 Yapısı 14.1 Backlog - P1: document versioning/re-index diff; user
 feedback eval candidate; online eval sampling; source-level -\> access
 control; MCP playground; batch comparison/report export; advanced
 table-aware extraction. - P2: GPU EC2 + vLLM; Terraform/CDK tam IaC;
 multimodal PDF understanding; learned/dynamic router classifier; context
 compression/memory optimization; reranker serving optimization; tenant
-billing/quotas; multi-region/DR. 14.2 Temel teknik kararlar (ADR) ADR
+billing/quotas; multi-region/DR. 14.2 Temel teknik kararlar
 Karar / gerekçe Provider abstraction zorunlu --- model/provider churn ve
 benchmark karşılaştırılabilirliği. Eval dataset feature'dan önce ---
 iyileşmeyi objektif ölçmek. Agent loops bounded --- reliability, maliyet
@@ -368,7 +368,7 @@ agentic-rag-platform/ apps/ \# api (FastAPI), web (Next.js) ├─ packages/
 \# ingestion, retrieval, agents, providers, evals, mcp_server,
 observability ├─ workers/ \# ingestion_worker, eval_worker ├─ evals/ \#
 datasets, rubrics, reports ├─ infra/ \# docker, terraform (P2/late P1)
-├─ tests/ \# unit, integration, e2e ├─ docs/ \# architecture, adr,
+├─ tests/ \# unit, integration, e2e ├─ docs/ \# architecture,
 benchmarks ├─ .github/workflows/ ├─ README.md └─ 14.4 Benchmark artifact
 metadata - Her run en az experiment_id, git_sha, dataset/prompt/router
 version, retrieval profile, embedding/reranker, provider+exact model id,
