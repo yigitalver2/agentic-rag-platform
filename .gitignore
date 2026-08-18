@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# uv
+.uv/
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Editör / OS
+.vscode/
+.DS_Store
+
+# Test / coverage
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+
+# Loglar / geçici
+*.log
+
+
+CLAUDE.md
+PHASES.md
+Agentic_RAG_PRD_TR.md
+
+

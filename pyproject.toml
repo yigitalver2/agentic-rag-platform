@@ -1,0 +1,9 @@
+[project]
+name = "agentic-rag-platform"
+version = "0.0.0"
+description = "Agentic RAG platform — öğrenme projesi (bkz. CLAUDE.md, PHASES.md)"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.uv]
+package = false
