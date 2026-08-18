@@ -7,3 +7,40 @@ dependencies = []
 
 [tool.uv]
 package = false
+
+
+[dependency-groups]
+dev = [
+    "ruff>=0.6",
+    "pyright>=1.1",
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E",     # pycodestyle hataları
+    "F",     # pyflakes (kullanılmayan import, tanımsız isim, vb.)
+    "I",     # isort (import sıralama)
+    "UP",    # pyupgrade (eski Python idiomlarını modernize etmeyi önerir)
+    "B",     # flake8-bugbear (yaygın "sinsi" hatalar: mutable default arg vb.)
+    "ASYNC", # async koddaki yaygın hatalar (blocking call in async def vb.)
+]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.pyright]
+include = ["apps", "packages", "workers", "tests"]
+venvPath = "."
+venv = ".venv"
+typeCheckingMode = "strict"
+pythonVersion = "3.12"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
